@@ -1,33 +1,37 @@
 package com.dhillon.factory.pizzaAbstractFactoryPattern.concreteCreator;
 
-import com.dhillon.factory.pizzaAbstractFactoryPattern.abstractCreators.PizzaIngredientAbstractFactory;
-import com.dhillon.factory.pizzaAbstractFactoryPattern.abstractCreators.PizzaStoreHavingFactoryMethod;
-import com.dhillon.factory.pizzaAbstractFactoryPattern.abstractProducts.AbstractPizza;
+import com.dhillon.factory.pizzaAbstractFactoryPattern.abstractProducts.Pizza;
+import com.dhillon.factory.pizzaAbstractFactoryPattern.abstractCreators.PizzaIngredientFactory;
+import com.dhillon.factory.pizzaAbstractFactoryPattern.abstractCreators.PizzaStore;
 import com.dhillon.factory.pizzaAbstractFactoryPattern.concreteProducts.CheesePizza;
 import com.dhillon.factory.pizzaAbstractFactoryPattern.concreteProducts.ClamPizza;
 import com.dhillon.factory.pizzaAbstractFactoryPattern.concreteProducts.PepperoniPizza;
 import com.dhillon.factory.pizzaAbstractFactoryPattern.concreteProducts.VeggiePizza;
 
-public class NYPizzaStore extends PizzaStoreHavingFactoryMethod {
+public class NYPizzaStore extends PizzaStore {
  
-	protected AbstractPizza factoryMethodCreatePizza(String item) {
-		AbstractPizza pizza = null;
-		PizzaIngredientAbstractFactory ingredientFactory =
-			new NYPizza();
+	protected Pizza createPizza(String item) {
+		Pizza pizza = null;
+		PizzaIngredientFactory ingredientFactory =
+			new NYPizzaIngredientFactory();
 
         switch (item) {
-            case "cheese" -> pizza = new CheesePizza
-                    .Builder(ingredientFactory, "New York Style Cheese Pizza")
-                    .build();
-            case "veggie" -> pizza = new VeggiePizza
-                    .Builder(ingredientFactory, "New York Style veggie Pizza")
-                    .build();
-            case "clam" -> pizza = new ClamPizza
-                    .Builder(ingredientFactory, "New York Style clam Pizza")
-                    .build();
-            case "pepperoni" -> pizza = new PepperoniPizza
-                    .Builder(ingredientFactory, "New York Style pepperoni Pizza")
-                    .build();
+            case "cheese" -> {
+                pizza = new CheesePizza(ingredientFactory);
+                pizza.setName("New York Style Cheese Pizza");
+            }
+            case "veggie" -> {
+                pizza = new VeggiePizza(ingredientFactory);
+                pizza.setName("New York Style Veggie Pizza");
+            }
+            case "clam" -> {
+                pizza = new ClamPizza(ingredientFactory);
+                pizza.setName("New York Style Clam Pizza");
+            }
+            case "pepperoni" -> {
+                pizza = new PepperoniPizza(ingredientFactory);
+                pizza.setName("New York Style Pepperoni Pizza");
+            }
         }
 		return pizza;
 	}

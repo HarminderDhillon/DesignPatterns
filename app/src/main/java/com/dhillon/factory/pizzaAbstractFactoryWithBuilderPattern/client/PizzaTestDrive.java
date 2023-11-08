@@ -1,17 +1,17 @@
-package com.dhillon.factory.pizzaAbstractFactoryPattern.client;
+package com.dhillon.factory.pizzaAbstractFactoryWithBuilderPattern.client;
 
-import com.dhillon.factory.pizzaAbstractFactoryPattern.concreteCreator.ChicagoPizzaStore;
-import com.dhillon.factory.pizzaAbstractFactoryPattern.concreteCreator.NYPizzaStore;
-import com.dhillon.factory.pizzaAbstractFactoryPattern.abstractCreators.PizzaStore;
-import com.dhillon.factory.pizzaAbstractFactoryPattern.abstractProducts.Pizza;
+import com.dhillon.factory.pizzaAbstractFactoryWithBuilderPattern.concreteCreator.ChicagoPizzaStore;
+import com.dhillon.factory.pizzaAbstractFactoryWithBuilderPattern.concreteCreator.NYPizzaStore;
+import com.dhillon.factory.pizzaAbstractFactoryWithBuilderPattern.abstractProducts.AbstractPizza;
+import com.dhillon.factory.pizzaAbstractFactoryWithBuilderPattern.abstractCreators.PizzaStoreHavingFactoryMethod;
 
 public class PizzaTestDrive {
  
 	public static void main(String[] args) {
-		PizzaStore nyStore = new NYPizzaStore();
-		PizzaStore chicagoStore = new ChicagoPizzaStore();
+		PizzaStoreHavingFactoryMethod nyStore = new NYPizzaStore();
+		PizzaStoreHavingFactoryMethod chicagoStore = new ChicagoPizzaStore();
  
-		Pizza pizza = nyStore.orderPizza("cheese");
+		AbstractPizza pizza = nyStore.orderPizza("cheese");
 		System.out.println("Ethan ordered a " + pizza + "\n");
  
 		pizza = chicagoStore.orderPizza("cheese");

@@ -1,10 +1,10 @@
 package com.dhillon.factory.pizzaAbstractFactoryPattern.concreteCreator;
 
-import com.dhillon.factory.pizzaAbstractFactoryPattern.abstractCreators.PizzaIngredientAbstractFactory;
+import com.dhillon.factory.pizzaAbstractFactoryPattern.abstractCreators.PizzaIngredientFactory;
 import com.dhillon.factory.pizzaAbstractFactoryPattern.abstractIngredients.*;
 import com.dhillon.factory.pizzaAbstractFactoryPattern.concreteIngradients.*;
 
-public class NYPizza implements PizzaIngredientAbstractFactory {
+public class NYPizzaIngredientFactory implements PizzaIngredientFactory {
  
 	public Dough createDough() {
 		return new ThinCrustDough();

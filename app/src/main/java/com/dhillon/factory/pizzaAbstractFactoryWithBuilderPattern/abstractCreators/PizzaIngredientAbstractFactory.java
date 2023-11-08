@@ -1,6 +1,6 @@
-package com.dhillon.factory.pizzaAbstractFactoryPattern.abstractCreators;
+package com.dhillon.factory.pizzaAbstractFactoryWithBuilderPattern.abstractCreators;
 
-import com.dhillon.factory.pizzaAbstractFactoryPattern.abstractIngredients.*;
+import com.dhillon.factory.pizzaAbstractFactoryWithBuilderPattern.abstractIngredients.*;
 
 public interface PizzaIngredientAbstractFactory {
  

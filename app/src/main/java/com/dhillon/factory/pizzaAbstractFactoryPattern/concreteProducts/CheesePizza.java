@@ -1,31 +1,13 @@
 package com.dhillon.factory.pizzaAbstractFactoryPattern.concreteProducts;
 
-import com.dhillon.factory.pizzaAbstractFactoryPattern.abstractProducts.AbstractPizza;
-import com.dhillon.factory.pizzaAbstractFactoryPattern.abstractCreators.PizzaIngredientAbstractFactory;
+import com.dhillon.factory.pizzaAbstractFactoryPattern.abstractProducts.Pizza;
+import com.dhillon.factory.pizzaAbstractFactoryPattern.abstractCreators.PizzaIngredientFactory;
 
-public class CheesePizza extends AbstractPizza {
-	private final PizzaIngredientAbstractFactory ingredientFactory;
-
-	public static class Builder extends AbstractPizza.PizzaBuilder<Builder> {
-
-		public Builder(PizzaIngredientAbstractFactory ingredients, String name) {
-			super(ingredients, name);
-		}
-
-		@Override
-		protected Builder self() {
-			return this;
-		}
-
-		@Override
-		public AbstractPizza build() {
-			return new CheesePizza(this);
-		}
-	}
+public class CheesePizza extends Pizza {
+	PizzaIngredientFactory ingredientFactory;
  
-	private CheesePizza(Builder builder) {
-		super(builder);
-		this.ingredientFactory = ingredients;
+	public CheesePizza(PizzaIngredientFactory ingredientFactory) {
+		this.ingredientFactory = ingredientFactory;
 	}
  
 	public void prepare() {

@@ -1,7 +1,7 @@
-package com.dhillon.factory.pizzaAbstractFactoryPattern.abstractProducts;
+package com.dhillon.factory.pizzaAbstractFactoryWithBuilderPattern.abstractProducts;
 
-import com.dhillon.factory.pizzaAbstractFactoryPattern.abstractCreators.PizzaIngredientAbstractFactory;
-import com.dhillon.factory.pizzaAbstractFactoryPattern.abstractIngredients.*;
+import com.dhillon.factory.pizzaAbstractFactoryWithBuilderPattern.abstractCreators.PizzaIngredientAbstractFactory;
+import com.dhillon.factory.pizzaAbstractFactoryWithBuilderPattern.abstractIngredients.*;
 
 public abstract class AbstractPizza {
     protected String name;

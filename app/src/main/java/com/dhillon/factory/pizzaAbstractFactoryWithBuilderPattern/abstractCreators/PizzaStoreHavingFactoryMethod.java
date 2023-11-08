@@ -1,6 +1,6 @@
-package com.dhillon.factory.pizzaAbstractFactoryPattern.abstractCreators;
+package com.dhillon.factory.pizzaAbstractFactoryWithBuilderPattern.abstractCreators;
 
-import com.dhillon.factory.pizzaAbstractFactoryPattern.abstractProducts.AbstractPizza;
+import com.dhillon.factory.pizzaAbstractFactoryWithBuilderPattern.abstractProducts.AbstractPizza;
 
 public abstract class PizzaStoreHavingFactoryMethod {
  

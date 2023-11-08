@@ -1,11 +1,11 @@
 package com.dhillon.factory.pizzaAbstractFactoryPattern.concreteCreator;
 
-import com.dhillon.factory.pizzaAbstractFactoryPattern.abstractCreators.PizzaIngredientAbstractFactory;
+import com.dhillon.factory.pizzaAbstractFactoryPattern.abstractCreators.PizzaIngredientFactory;
 import com.dhillon.factory.pizzaAbstractFactoryPattern.abstractIngredients.*;
 import com.dhillon.factory.pizzaAbstractFactoryPattern.concreteIngradients.*;
 
-public class ChicagoPizza
-	implements PizzaIngredientAbstractFactory
+public class ChicagoPizzaIngredientFactory
+	implements PizzaIngredientFactory
 {
 
 	public Dough createDough() {
