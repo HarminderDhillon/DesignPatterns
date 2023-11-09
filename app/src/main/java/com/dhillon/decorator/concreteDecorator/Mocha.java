@@ -1,7 +1,7 @@
-package com.dhillon.decorator.starbuzzWithSizes.concreteDecorator;
+package com.dhillon.decorator.concreteDecorator;
 
-import com.dhillon.decorator.starbuzzWithSizes.baseAbstract.Beverage;
-import com.dhillon.decorator.starbuzzWithSizes.abstractDecorator.CondimentDecorator;
+import com.dhillon.decorator.abstractDecorator.CondimentDecorator;
+import com.dhillon.decorator.baseAbstract.Beverage;
 
 public class Mocha extends CondimentDecorator {
 	public Mocha(Beverage beverage) {

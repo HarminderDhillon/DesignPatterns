@@ -1,12 +1,12 @@
-package com.dhillon.decorator.starbuzzWithSizes.client;
+package com.dhillon.decorator.client;
 
-import com.dhillon.decorator.starbuzzWithSizes.concreteDecorator.Mocha;
-import com.dhillon.decorator.starbuzzWithSizes.concreteDecorator.Soy;
-import com.dhillon.decorator.starbuzzWithSizes.concreteDecorator.Whip;
-import com.dhillon.decorator.starbuzzWithSizes.baseAbstract.Beverage;
-import com.dhillon.decorator.starbuzzWithSizes.baseConcrete.DarkRoast;
-import com.dhillon.decorator.starbuzzWithSizes.baseConcrete.Espresso;
-import com.dhillon.decorator.starbuzzWithSizes.baseConcrete.HouseBlend;
+import com.dhillon.decorator.baseAbstract.Beverage;
+import com.dhillon.decorator.baseConcrete.DarkRoast;
+import com.dhillon.decorator.baseConcrete.HouseBlend;
+import com.dhillon.decorator.concreteDecorator.Mocha;
+import com.dhillon.decorator.concreteDecorator.Soy;
+import com.dhillon.decorator.concreteDecorator.Whip;
+import com.dhillon.decorator.baseConcrete.Espresso;
 
 public class StarbuzzCoffee {
  

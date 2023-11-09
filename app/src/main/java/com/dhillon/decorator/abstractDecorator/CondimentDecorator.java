@@ -1,6 +1,6 @@
-package com.dhillon.decorator.starbuzzWithSizes.abstractDecorator;
+package com.dhillon.decorator.abstractDecorator;
 
-import com.dhillon.decorator.starbuzzWithSizes.baseAbstract.Beverage;
+import com.dhillon.decorator.baseAbstract.Beverage;
 
 public abstract class CondimentDecorator extends Beverage {
 	public Beverage beverage;

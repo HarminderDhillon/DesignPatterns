@@ -1,4 +1,4 @@
-package com.dhillon.decorator.starbuzzWithSizes.baseAbstract;
+package com.dhillon.decorator.baseAbstract;
 
 public abstract class Beverage {
 	public enum Size { TALL, GRANDE, VENTI }

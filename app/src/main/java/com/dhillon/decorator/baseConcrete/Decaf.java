@@ -1,6 +1,6 @@
-package com.dhillon.decorator.starbuzzWithSizes.baseConcrete;
+package com.dhillon.decorator.baseConcrete;
 
-import com.dhillon.decorator.starbuzzWithSizes.baseAbstract.Beverage;
+import com.dhillon.decorator.baseAbstract.Beverage;
 
 public class Decaf extends Beverage {
 	public Decaf() {
